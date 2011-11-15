@@ -41,3 +41,14 @@ payload = uvarint(x_delta) + uvarint(y_delta)
 
 (only log when there's a change)
 </pre>
+
+### keyboard
+Logs all key-down events
+
+(You need to have 'Enable Access for Assistive Devices' checked in your System Prefs.)
+
+### mojo-sampler
+<pre>
+payload = user-feedback level (0-10)
+</pre>
+
