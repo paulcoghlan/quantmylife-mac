@@ -6,7 +6,7 @@
 #import "MojoSamplerPanel.h"
 
 // Wakeup random msec period - max 1hr
-#define MAX_SAMPLE_INTERVAL_MS    (10*1000)
+#define MAX_SAMPLE_INTERVAL_MS    (3600*1000)
 
 // Default to mid-point on slider
 #define DEFAULT_MOJO_VALUE        5
