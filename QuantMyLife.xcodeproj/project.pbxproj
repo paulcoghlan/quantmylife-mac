@@ -38,6 +38,10 @@
 		00AD38EA138E8160000E89A5 /* Sparkle.framework in Copy Files (1 item) */ = {isa = PBXBuildFile; fileRef = 00AD38E9138E8160000E89A5 /* Sparkle.framework */; };
 		00AD38EC138E820D000E89A5 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 00AD38EB138E820D000E89A5 /* dsa_pub.pem */; };
 		00AD38EE138E844C000E89A5 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00AD38ED138E844C000E89A5 /* icon.icns */; };
+		DA8B825A14727F8800F18479 /* MojoSamplerSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8B825914727F8800F18479 /* MojoSamplerSignal.m */; };
+		DA8B825E14727FAF00F18479 /* KeyboardSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8B825D14727FAF00F18479 /* KeyboardSignal.m */; };
+		DA8B8262147280A300F18479 /* MojoSamplerPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8B8260147280A300F18479 /* MojoSamplerPanel.m */; };
+		DA8B8263147280A300F18479 /* MojoSamplerPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8B8261147280A300F18479 /* MojoSamplerPanel.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,6 +112,13 @@
 		00AD38E9138E8160000E89A5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = QuantMyLife/lib/Sparkle.framework; sourceTree = "<group>"; };
 		00AD38EB138E820D000E89A5 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		00AD38ED138E844C000E89A5 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		DA8B825814727F8800F18479 /* MojoSamplerSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MojoSamplerSignal.h; sourceTree = "<group>"; };
+		DA8B825914727F8800F18479 /* MojoSamplerSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MojoSamplerSignal.m; sourceTree = "<group>"; };
+		DA8B825C14727FAF00F18479 /* KeyboardSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardSignal.h; sourceTree = "<group>"; };
+		DA8B825D14727FAF00F18479 /* KeyboardSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardSignal.m; sourceTree = "<group>"; };
+		DA8B825F147280A300F18479 /* MojoSamplerPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MojoSamplerPanel.h; sourceTree = "<group>"; };
+		DA8B8260147280A300F18479 /* MojoSamplerPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MojoSamplerPanel.m; sourceTree = "<group>"; };
+		DA8B8261147280A300F18479 /* MojoSamplerPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MojoSamplerPanel.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +187,9 @@
 		000A448B1383338B005A4F5B /* QuantMyLife */ = {
 			isa = PBXGroup;
 			children = (
+				DA8B825F147280A300F18479 /* MojoSamplerPanel.h */,
+				DA8B8260147280A300F18479 /* MojoSamplerPanel.m */,
+				DA8B8261147280A300F18479 /* MojoSamplerPanel.xib */,
 				007F2E6F1384102600844A40 /* lib */,
 				000A44B2138334E1005A4F5B /* Signals */,
 				000A44971383338B005A4F5B /* QuantMyLifeAppDelegate.h */,
@@ -206,6 +220,10 @@
 		000A44B2138334E1005A4F5B /* Signals */ = {
 			isa = PBXGroup;
 			children = (
+				DA8B825C14727FAF00F18479 /* KeyboardSignal.h */,
+				DA8B825D14727FAF00F18479 /* KeyboardSignal.m */,
+				DA8B825814727F8800F18479 /* MojoSamplerSignal.h */,
+				DA8B825914727F8800F18479 /* MojoSamplerSignal.m */,
 				000A44B4138334FE005A4F5B /* Signal.h */,
 				000A44B5138334FE005A4F5B /* Signal.m */,
 				000A44B71383357E005A4F5B /* InputIdleSignal.h */,
@@ -333,6 +351,7 @@
 				007F2E731384123800844A40 /* LICENSES.html in Resources */,
 				00AD38EC138E820D000E89A5 /* dsa_pub.pem in Resources */,
 				00AD38EE138E844C000E89A5 /* icon.icns in Resources */,
+				DA8B8263147280A300F18479 /* MojoSamplerPanel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +378,9 @@
 				00AC4144138D32F10031EC50 /* SBJsonParser.m in Sources */,
 				00AC4145138D32F10031EC50 /* SBJsonWriter.m in Sources */,
 				0055A956138DC56500F99C59 /* FrontThingSignal.m in Sources */,
+				DA8B825A14727F8800F18479 /* MojoSamplerSignal.m in Sources */,
+				DA8B825E14727FAF00F18479 /* KeyboardSignal.m in Sources */,
+				DA8B8262147280A300F18479 /* MojoSamplerPanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

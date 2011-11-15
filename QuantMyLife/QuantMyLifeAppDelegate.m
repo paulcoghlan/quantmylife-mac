@@ -5,7 +5,8 @@
 #import "MousePositionSignal.h"
 #import "FrontAppSignal.h"
 #import "FrontThingSignal.h"
-
+#import "KeyboardSignal.h"
+#import "MojoSamplerSignal.h"
 
 @implementation QuantMyLifeAppDelegate
 
@@ -21,6 +22,8 @@
     [signals addObject:[[MousePositionSignal alloc] init]];
     [signals addObject:[[FrontAppSignal alloc] init]];
     [signals addObject:[[FrontThingSignal alloc] init]];
+    [signals addObject:[[KeyboardSignal alloc] init]];
+    [signals addObject:[[MojoSamplerSignal alloc] init]];
 }
 
 - (IBAction)showPreferences:(id)sender

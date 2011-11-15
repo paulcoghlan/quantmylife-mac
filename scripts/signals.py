@@ -17,7 +17,7 @@ def parseEventsFromStream(f):
 
 def signalDir(signalName):
   return os.path.expanduser(
-      "~/Library/Application Support/QuantMyLife/signals/%s" % signalName)
+      "~/Library/Application Support/QuantMyLife-dev/signals/%s" % signalName)
 
 
 def readEvents(signalName):
@@ -52,12 +52,24 @@ def front_thing():
   for ms, payload in readEvents('front-thing'):
     yield ms, 'front-thing', json.loads(payload)
 
+def mojo_sampler():
+  for ms, payload in readEvents('mojo-sampler'):
+    x = uvarintDecode(payload)
+    yield ms, 'mojo-sampler', x
+
+def keyboard():
+  for ms, payload in readEvents('keyboard'):
+    yield ms, 'keyboard'
+
+
 
 NAME_F_MAP = {
   'input-idle': input_idle,
   'mouse-position': mouse_position,
   'front-app': front_app,
   'front-thing': front_thing,
+  'keyboard': keyboard,
+  'mojo-sampler':mojo_sampler
 }
 
 
