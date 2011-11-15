@@ -6,6 +6,20 @@
 
 - (id)initWithSlug:(NSString*)slug formatVersion:(int)formatVersion sampleMs:(unsigned long long)sampleMs
 {
+    self = [self initWithSlug:slug formatVersion:formatVersion];
+    if (self) {
+        [NSTimer
+         scheduledTimerWithTimeInterval:(sampleMs / 1000.0)
+         target:self
+         selector:@selector(sample:)
+         userInfo:nil
+         repeats:YES];
+    }
+    return self;
+}
+
+- (id)initWithSlug:(NSString*)slug formatVersion:(int)formatVersion 
+{
     self = [super init];
     if (self) {
         
@@ -50,12 +64,6 @@
 			//HANDLE
 		}
         
-        [NSTimer
-             scheduledTimerWithTimeInterval:(sampleMs / 1000.0)
-             target:self
-             selector:@selector(sample:)
-             userInfo:nil
-             repeats:YES];
     }
     return self;
 }

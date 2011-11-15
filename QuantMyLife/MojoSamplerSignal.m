@@ -24,8 +24,7 @@
     }
     [self startTimer];
  
-    // TODO: overloading initWithSlug to not take sample
-    self = [super initWithSlug:@"mojo-sampler" formatVersion:1 sampleMs:0];
+    self = [super initWithSlug:@"mojo-sampler" formatVersion:1];
 
     return self;
 }

@@ -11,6 +11,7 @@
 	unsigned long long lastLoggedMs;
 }
 
+- (id)initWithSlug:(NSString*)slug formatVersion:(int)formatVersion;
 - (id)initWithSlug:(NSString*)slug formatVersion:(int)formatVersion sampleMs:(unsigned long long)sampleMs;
 - (void)logEvent:(NSData*)data;
 - (void)sample:(NSTimer*)timer;
